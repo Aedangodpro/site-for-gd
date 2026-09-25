@@ -8,15 +8,16 @@
 
 <script>
 function launchAboutBlank() {
-    const win = window.open("about:blank"); // open blank tab
+    // Open the about:blank tab
+    const win = window.open("about:blank");
+
+    // Inject your game into the blank tab
     win.document.write(`
         <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Student MyPortal</title>
-            <link rel="icon" type="image/png" href="https://i.postimg.cc/gjYHb9xS/student-myportal.png">
             <style>
                 html, body {
                     margin: 0;
@@ -53,7 +54,11 @@ function launchAboutBlank() {
         </body>
         </html>
     `);
+
     win.document.close();
+
+    // NOW redirect the original GitHub page
+    window.location.href = "https://sites.google.com/stu.wvusd.org/studentportal/home";  // change this to whatever you want
 }
 </script>
 
